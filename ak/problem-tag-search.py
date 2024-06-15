@@ -52,13 +52,13 @@ class Problem_Matcher:
     def __init__(self, num_neighbors):
         current_dir = dirname(__file__)
 
-        embeddings = np.load(join(current_dir, 'problem_embeddings.npy'))
+        embeddings = np.load(join(current_dir, 'data_artifacts', 'problem_embeddings.npy'))
 
         self.nbrs = NearestNeighbors(n_neighbors=num_neighbors, algorithm='ball_tree').fit(embeddings)
 
         self.open_ai_client = OpenAI(api_key='sk-proj-Zwf0tSiDacdeiQRTMLVHT3BlbkFJMbreGiCSIpGX1rwYEtHD')
 
-        with open(join(current_dir, 'simplified_df.pkl'), 'rb') as f:
+        with open(join(current_dir, 'data_artifacts', 'simplified_df.pkl'), 'rb') as f:
             self.templates = pickle.load(f)
 
         with open(join(current_dir, 'simplify_task_prompt.txt'), 'r') as f:
