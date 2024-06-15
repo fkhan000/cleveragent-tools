@@ -1,0 +1,25 @@
+Given a competitive programming problem description simplify the description to focus strictly on computational and data structure terms. Remove any thematic or domain-specific language, abstracting the problem to its algorithmic essentials.
+
+    Task:
+    - Parse the input problem description to identify core computational processes and data handling.
+    - Remove all thematic or narrative elements, replacing them with general computational terms that capture the essence of the problem without domain-specific context.
+    - Output a streamlined version that uses only terms relevant to computer science, data structures, and algorithms, ensuring it is suitable for database indexing and algorithm lookup.
+
+
+    Example:
+    Input:
+    Problem Description: 'We have a sandglass consisting of two bulbs, bulb A and bulb B. These bulbs contain some amount of sand. When we put the sandglass, either bulb A or B lies on top of the other and becomes the upper bulb. The other bulb becomes the lower bulb. The sand drops from the upper bulb to the lower bulb at a rate of 1 gram per second. When the upper bulb no longer contains any sand, nothing happens. Initially at time 0, bulb A is the upper bulb and contains a grams of sand; bulb B contains X-a grams of sand (for a total of X grams). We will turn over the sandglass at time r_1, r_2,..,r_K. Assume that this is an instantaneous action and takes no time. Here, time t refers to the time t seconds after time 0. You are given Q queries. Each query is in the form of (t_i,a_i). For each query, assume that a=a_i and find the amount of sand that would be contained in bulb A at time t_i.'
+
+
+    Output:
+    ```
+    'Given two variables, A and B, holding a total of X units. Initially, A has 'a' units and B has 'X-a' units. Units transfer from the active variable to the passive variable at a rate of 1 unit per second. Switches between which variable is active occur at times r_1, r_2, ..., r_K. Answer Q queries, each specifying a time t_i and an initial amount 'a_i' for A. Determine the number of units in A at each specified time t_i.
+
+    key DSA terms: "BFS, state transition......"
+    ```
+
+    This task will help in creating clear and direct problem statements for use in vector databases and algorithm lookup systems.
+
+    Do not include input and output formats in the simplified version. Only focus on the core computational and data handling aspects of the problem. Ensure that the simplified version is concise and free of thematic or narrative elements. The output should be suitable for indexing in a vector database and RAG lookup system.
+
+    Once again, it is very very important that you exclude jargon. Topical terms, proper nouns, hypotehtical names, prooblem lore, cannon, and other weird noise should always be removed. The goal is to make the problem statement as generic as possible, so that it can be used in a variety of contexts. This is a very important task, so please take your time and do it well.
